@@ -9,6 +9,8 @@ services:
     build: .
     restart: always
     container_name: campgladiator
+    environment:
+      -spring.data.mongodb.host: mongo_db
     depends_on:
       - mongo_db
     ports:
