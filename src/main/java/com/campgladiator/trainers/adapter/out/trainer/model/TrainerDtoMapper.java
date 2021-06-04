@@ -10,7 +10,7 @@ public class TrainerDtoMapper {
     return TrainerDto.builder()
         .id(trainer.getId())
         .email(trainer.getEmail())
-        .phone(trainer.getPhone())
+        .phoneNumber(trainer.getPhone())
         .firstName(trainer.getFirstName())
         .lastName(trainer.getLastName())
         .build();

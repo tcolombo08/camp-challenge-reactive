@@ -14,7 +14,7 @@ import lombok.With;
 public class TrainerDto {
   private String id;
   private String email;
-  private String phone;
+  private String phoneNumber;
   private String firstName;
   private String lastName;
 }

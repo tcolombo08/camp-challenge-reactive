@@ -14,3 +14,4 @@ spring:
       host: localhost
       port: 27017
       database: trainers
+      auto-index-creation: true

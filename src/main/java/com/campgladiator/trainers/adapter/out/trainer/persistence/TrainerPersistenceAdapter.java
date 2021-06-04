@@ -4,15 +4,16 @@ import com.campgladiator.trainers.domain.trainer.model.Trainer;
 import com.campgladiator.trainers.domain.trainer.port.out.persistence.CreateTrainerPort;
 import com.campgladiator.trainers.domain.trainer.port.out.persistence.QueryTrainerPort;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
 public class TrainerPersistenceAdapter implements QueryTrainerPort, CreateTrainerPort {
 
-  private TrainerRepository trainerRepository;
+  private final TrainerRepository trainerRepository;
 
   @Override
   public Mono<Trainer> create(Trainer trainer) {
